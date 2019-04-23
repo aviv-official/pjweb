@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Plain Jane Webview - PJWEB",
+    "description": "Content Without Disruptions",
+    "version": "1.0.0",
+    "author": "Steve Shelton",
+    "content_scripts": [ {
+        "matches": ["<all_urls>"],
+        "js": ["js/content_script.js"]
+      } 
+    ],
+    "browser_action": {
+        "default_icon": "./images/icon-128x128.png",
+        "default_title": "PJ Web",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "webRequest"
+    ],
+    "icons": {
+        "16": "images/icon-16x16.png",
+        "32": "images/icon-32x32.png",
+        "48": "images/icon-48x48.png",
+        "128": "images/icon-128x128.png"
+    },
+    "web_accessible_resources": [
+        "js/*",
+        "js/popup.js"
+     ]
+}
